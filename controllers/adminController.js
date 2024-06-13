@@ -122,7 +122,7 @@ const blogsBYAuthor = async (req, res) => {
   const authorBlogs = await authorModel
     .findOne({ authorId: id })
     .populate("blogsId"); 
-
+    
   if (authorBlogs) {
     res.status(200).send(authorBlogs);
   } else { 
